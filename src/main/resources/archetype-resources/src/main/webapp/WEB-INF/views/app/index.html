@@ -8,9 +8,15 @@
 <title>Apps</title>
 </head>
 <body>
+	<a href="new.html" th:href="@{'/apps/create'}">Create</a>
 	<ul>
 		<li th:each="app : ${symbol_dollar}{apps}">
-			<span th:text="${symbol_dollar}{app.id}">app id</span> - <span th:text="${symbol_dollar}{app.name}">app name</span>
+			<a href="show.html" th:href="@{'/apps/'+${app.id}}"><span th:text="${symbol_dollar}{app.id}">app id</span> - <span th:text="${symbol_dollar}{app.name}">app name</span></a>
+			<a href="edit.html" th:href="@{'/apps/'+${app.id}+'/edit'}">Edit</a>
+			<form action="#" th:action="@{'/apps/'+${app.id}}" method="post"
+				th:method="delete">
+				<input type="submit" value="Delete" />
+			</form>
 		</li>
 	</ul>
 </body>

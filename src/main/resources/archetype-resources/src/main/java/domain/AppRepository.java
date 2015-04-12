@@ -20,14 +20,25 @@ public class AppRepository {
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	@Transactional
-	public App save(final App app) {
-		LOG.debug("save");
-		return entityManager.merge(app);
-	}
-
 	public List<App> findAll() {
 		LOG.debug("findAll");
 		return entityManager.createNamedQuery(App.QUERY_NAME_FIND_ALL, App.class).getResultList();
+	}
+
+	public App findById(final Long id) {
+		LOG.debug("findById");
+		return entityManager.find(App.class, id);
+	}
+	
+	@Transactional
+	public App save(final App story) {
+		LOG.debug("save");
+		return entityManager.merge(story);
+	}
+	
+	@Transactional
+	public void remove(final Long id) {
+		LOG.debug("remove");
+		entityManager.remove(findById(id));
 	}
 }

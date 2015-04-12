@@ -19,7 +19,7 @@ import javax.persistence.Table;
 @NamedQueries({ @NamedQuery(name = App.QUERY_NAME_FIND_ALL, query = "select e from App e") })
 public class App implements Serializable {
 	
-	private static final long serialVersionUID = 3767075371975003272L;
+	private static final long serialVersionUID = 1L;
 	public static final String QUERY_NAME_FIND_ALL = "App.findAll";
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

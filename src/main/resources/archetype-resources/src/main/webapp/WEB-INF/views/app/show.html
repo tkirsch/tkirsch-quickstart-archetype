@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<title>Show App</title>
+</head>
+<body>
+	<input type="text" th:field="${app.id}" />
+	<input type="text" th:field="${app.name}" />
+	<a href="edit.html" th:href="@{'/apps/'+${app.id}+'/edit'}">Edit</a>
+	<form action="#" th:action="@{'/apps/'+${app.id}}" method="post"
+		th:method="delete">
+		<input type="submit" value="Delete" />
+	</form>
+</body>
+</html>
