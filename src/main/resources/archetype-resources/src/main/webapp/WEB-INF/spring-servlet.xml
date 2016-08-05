@@ -18,13 +18,13 @@
 
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:resources mapping="/index.html" location="/index.html" />
+	<mvc:resources mapping="/404.html" location="/404.html" />
 
 	<bean id="templateResolver"
 		class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".html" />
 		<property name="templateMode" value="HTML" />
-		<!-- property name="cacheable" ref="thymeleafCacheable" / -->
 	</bean>
 
 	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
@@ -34,6 +34,11 @@
 	<bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
 		<property name="templateEngine" ref="templateEngine" />
 		<property name="characterEncoding" value="UTF-8" />
+	</bean>
+	
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="i18n/messages" />
 	</bean>
 
 </beans>

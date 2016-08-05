@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -5,9 +8,9 @@
 <title>Edit App</title>
 </head>
 <body>
-	<form action="#" th:action="@{'/apps/'+${app.id}}"
-		th:object="${app}" method="post" th:method="put">
+	<form action="${symbol_pound}" th:action="@{'/apps/'+${symbol_dollar}{id}}" th:object="${symbol_dollar}{app}" method="post" th:method="put">
 		<input type="text" th:field="*{name}" />
+		<p th:if="${symbol_dollar}{${symbol_pound}fields.hasErrors('name')}" th:errors="*{name}">Incorrect</p>
 		<input type="submit" />
 	</form>
 </body>
