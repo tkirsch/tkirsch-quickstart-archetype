@@ -13,7 +13,7 @@
 	<distributionManagement>
 		<repository>
 			<id>ftp-repository</id>
-			<url>ftp://ftp.bastardcoder.de/</url>
+			<url>${distributionManagement.repository.url}</url>
 		</repository>
 	</distributionManagement>
 
@@ -37,7 +37,25 @@
 					<artifactId>maven-archetype-plugin</artifactId>
 					<version>2.3</version>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.3</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+			</plugin>
+		</plugins>
 	</build>
+
+	<scm>
+		<developerConnection>scm:git:ssh://git@github.com:tkirsch/tkirsch-quickstart-archetype.git</developerConnection>
+	</scm>
+
 </project>
