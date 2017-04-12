@@ -54,7 +54,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:ssh://git@github.com:tkirsch/tkirsch-quickstart-archetype.git</developerConnection>
+		<developerConnection>scm:git:git://github.com/tkirsch/tkirsch-quickstart-archetype.git</developerConnection>
 	</scm>
 
 </project>
