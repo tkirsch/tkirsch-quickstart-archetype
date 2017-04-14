@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>tkirsch</groupId>
 	<artifactId>tkirsch-quickstart-archetype</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.3</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>tkirsch-quickstart-archetype</name>
@@ -59,7 +58,7 @@
 
 	<scm>
 		<developerConnection>scm:git:ssh://github.com/tkirsch/tkirsch-quickstart-archetype.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>tkirsch-quickstart-archetype-1.0.3</tag>
 	</scm>
 
 </project>
