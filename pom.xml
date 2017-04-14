@@ -58,8 +58,8 @@
 	</build>
 
 	<scm>
-		<connection>scm:git:ssh://github.com/tkirsch/tkirsch-quickstart-archetype.git</connection>
-		<developerConnection>scm:git:ssh://github.com/tkirsch/tkirsch-quickstart-archetype.git</developerConnection>
+		<connection>scm:git:ssh://git@github.com/tkirsch/tkirsch-quickstart-archetype.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/tkirsch/tkirsch-quickstart-archetype.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
